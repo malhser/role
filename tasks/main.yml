@@ -1,0 +1,11 @@
+---
+# tasks file for https
+    - name: install apache httpd
+      ansible.builtin.apt:
+        name: nginx
+        state: absent
+        update_cache: yes
+    - name: copy html
+      ansible.builtin.file:
+        dest: /var/www/html/index.html
+        state: absent
